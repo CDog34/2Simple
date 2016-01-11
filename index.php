@@ -1,11 +1,11 @@
 <?php
 /**
- * 这是 Typecho 0.9 系统的一套默认皮肤
- * 
- * @package Typecho Replica Theme 
- * @author Typecho Team
- * @version 1.2
- * @link http://typecho.org
+ * 一个轻量级Typecho主题
+ *
+ * @package Hikari
+ * @author CDog
+ * @version 0.1
+ * @link http://cdog.me
  */
 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
@@ -31,5 +31,5 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
     <?php $this->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
 </div><!-- end #main-->
 
-<?php $this->need('sidebar.php'); ?>
+
 <?php $this->need('footer.php'); ?>

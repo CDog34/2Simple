@@ -10,5 +10,8 @@
 </footer><!-- end #footer -->
 
 <?php $this->footer(); ?>
+<script src="<?php $this->options->themeUrl('hikari.js'); ?>">
+
+</script>
 </body>
 </html>
