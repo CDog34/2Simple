@@ -1,12 +1,17 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 
-        </div><!-- end .row -->
     </div>
 </div><!-- end #body -->
 
-<footer id="footer" role="contentinfo">
-    &copy; <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.
-    <?php _e('由 <a href="http://www.typecho.org">Typecho</a> 强力驱动'); ?>.
+<footer class="footer" role="contentinfo">
+    <p class="footer-site">
+      &copy; <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.
+    </p>
+    <p class="footer-theme">
+      暗闇も光るなら 星そらになる<br>
+      Theme Hikari By <a href="https://cdog.me" target="_blank">CDog(XD)</a>
+
+    </p>
 </footer><!-- end #footer -->
 
 <?php $this->footer(); ?>

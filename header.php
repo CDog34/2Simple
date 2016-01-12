@@ -15,7 +15,9 @@
 
     <!-- 使用url函数转换相关路径 -->
     <link rel="stylesheet" href="//cdnjscn.b0.upaiyun.com/libs/normalize/2.1.3/normalize.min.css">
+    <link rel="stylesheet" href="//filehost.izhai.net/web/font-awesome/4.5.0/css/font-awesome.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css'); ?>">
+
 
     <!--[if lt IE 9]>
     <script src="//cdnjscn.b0.upaiyun.com/libs/html5shiv/r29/html5.min.js"></script>
@@ -49,11 +51,14 @@
               </div>
         	    <p class="description"><?php $this->options->description() ?></p>
             </div>
-        </div><!-- end .row -->
+        </div><!-- end .site-name -->
+        <div class="going-down">
+          <i class="fa fa-angle-double-down"></i>
+        </div>
+
     </div>
 </header><!-- end #header -->
 <div class="body-wrapper">
   <div class="bg-blur bg-body layer-opti" style="background-image:url(http://tat.pics/v/14525052659001caf3dec533c6c23c9de0e1475b9494c.jpg)"></div>
   <div class="bg-color layer-opti"></div>
-    <div class="body-container">
-        <div class="row">
+    <div class="body-container clearfix">
