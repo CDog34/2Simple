@@ -371,10 +371,11 @@ section.widget{
 	border-right: none;
 	outline: none;
 }
+.cmt-content{
+	text-align: center;
+}
 textarea{
-	border-left: none;
-	border-top: none;
-	border-right: none;
+	border-bottom: none;
 	outline: none
 
 }
