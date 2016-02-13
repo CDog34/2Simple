@@ -379,4 +379,7 @@ textarea{
 		border-bottom: 1px dotted azure;
 		padding-bottom: 10px;
 	}
+	.post-content{
+		font-size: 1em;
+	}
 }
