@@ -1,13 +1,60 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
-<div id="comments">
+<?php function threadedComments($comments, $options) {
+    $commentClass = '';
+    if ($comments->authorId) {
+        if ($comments->authorId == $comments->ownerId) {
+            $commentClass .= ' comment-by-author';
+        } else {
+            $commentClass .= ' comment-by-user';
+        }
+    }
+
+    $commentLevelClass = $comments->levels > 0 ? ' comment-child' : ' comment-parent';
+?>
+
+<li id="li-<?php $comments->theId(); ?>" class="comment-body<?php
+if ($comments->levels > 0) {
+    echo ' comment-child';
+    $comments->levelsAlt(' comment-level-odd', ' comment-level-even');
+} else {
+    echo ' comment-parent';
+}
+$comments->alt(' comment-odd', ' comment-even');
+echo $commentClass;
+?>">
+    <div id="<?php $comments->theId(); ?>" class="clearfix comment-item">
+      <?php $comments->gravatar('40', ''); ?>
+      <div class="comment-right">
+        <div class="comment-meta">
+          <div class="comment-author">
+              <cite class="fn"><?php $comments->author(); ?></cite>
+          </div>
+
+            <div class="comment-date"><script>document.write(moment('<?php $comments->date('Y-m-d H:i'); ?>').calendar(null,{sameElse:'YYYY年MM月DD日 HH:MM'}));</script></div>
+        </div>
+        <?php $comments->content(); ?>
+        <span class="comment-reply"><?php $comments->reply(); ?></span>
+    </div>
+      </div>
+
+<?php if ($comments->children) { ?>
+    <div class="comment-children">
+        <?php $comments->threadedComments($options); ?>
+    </div>
+<?php } ?>
+</li>
+<?php } ?>
+
+
+<div id="comments" class="card">
     <?php $this->comments()->to($comments); ?>
     <?php if ($comments->have()): ?>
 	<h3><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></h3>
-    
+
     <?php $comments->listComments(); ?>
 
     <?php $comments->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
-    
+
     <?php endif; ?>
 
     <?php if($this->allow('comment')): ?>
@@ -15,7 +62,7 @@
         <div class="cancel-comment-reply">
         <?php $comments->cancelReply(); ?>
         </div>
-    
+
     	<h3 id="response"><?php _e('添加新评论'); ?></h3>
     	<form method="post" action="<?php $this->commentUrl() ?>" id="comment-form" role="form">
             <?php if($this->user->hasLogin()): ?>

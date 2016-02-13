@@ -1,4 +1,7 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
+<?php if (!$_SERVER['HTTP_X_PJAX']) {
+?>
+
 <!DOCTYPE HTML>
 <html class="no-js">
 <head>
@@ -25,40 +28,50 @@
     <![endif]-->
 
     <!-- 通过自有函数输出HTML头部信息 -->
-    <?php $this->header(); ?>
+    <?php $this->header('keywords=&generator=&template=&pingback=&xmlrpc=&wlw='); ?>
+    <script src="//filehost.izhai.net/web/moment.js/moment.min.js">
+
+    </script>
+    <script type="text/javascript">
+    moment.locale('zh-CN');
+    </script>
 </head>
-<body style="background-image:url(http://tat.pics/v/14525052659001caf3dec533c6c23c9de0e1475b9494c.jpg)">
+<body>
 <!--[if lt IE 8]>
     <div class="browsehappy" role="dialog"><?php _e('当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>'); ?>.</div>
 <![endif]-->
-<!--<div class="global-bg" style="background-image:url(http://tat.pics/v/14525052659001caf3dec533c6c23c9de0e1475b9494c.jpg">-->
-
 </div>
-<header id="header" class="clearfix">
-    <div class="container">
-        <div class="site-meta" >
-            <div class="site-name">
-              <h1 class="site-title">
-                <a id="logo" href="<?php $this->options->siteUrl(); ?>">
-                    <?php if ($this->options->logoUrl): ?>
-                    <img src="<?php $this->options->logoUrl() ?>" alt="<?php $this->options->title() ?>" />
-                    <?php endif; ?>
-                    <?php $this->options->title() ?>
-                </a>
-              </h1>
-              <div class="title-line">
-
-              </div>
-        	    <p class="description"><?php $this->options->description() ?></p>
-            </div>
-        </div><!-- end .site-name -->
-        <div class="going-down">
-          <i class="fa fa-angle-double-down"></i>
-        </div>
-
+<header id="header" class="clearfix" style="background-image:url(https://tat.pics/v/1455170477299Konachan.com_-_65450_brown_eyes_brown_hair_misaka_mikoto_seifuku_short_hair_to_aru_kagaku_no_railgun_to_aru_majutsu_no_index_vector.jpg)">
+    <div class="site-meta" >
+        <h1 class="site-title ">
+        <a id="logo"  class="header-words" href="<?php $this->options->siteUrl(); ?>">
+            <?php if ($this->options->logoUrl): ?>
+            <img src="<?php $this->options->logoUrl() ?>" alt="<?php $this->options->title() ?>" />
+            <?php endif; ?>
+            <?php $this->options->title() ?>
+        </a>
+        </h1>
+        <p class="site-description header-words"><?php $this->options->description() ?></p>
+    </div><!-- end .site-meta -->
+    <div class="going-down header-words fly-to-view">
+      <i class="fa fa-angle-double-down"></i>
     </div>
 </header><!-- end #header -->
-<div class="body-wrapper">
-  <div class="bg-blur bg-body layer-opti" style="background-image:url(http://tat.pics/v/14525052659001caf3dec533c6c23c9de0e1475b9494c.jpg)"></div>
-  <div class="bg-color layer-opti"></div>
-    <div class="body-container clearfix">
+<nav id="nav-menu" class="clearfix" role="navigation">
+    <div class="nav-inner">
+        <a<?php if($this->is('index')): ?> class="current"<?php endif; ?> href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a>
+        <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
+        <?php while($pages->next()): ?>
+        <a<?php if($this->is('page', $pages->slug)): ?> class="current"<?php endif; ?> href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
+        <?php endwhile; ?>
+    </div>                
+</nav>
+<div class="body-wrapper" id="pp">
+    <?php }else{?>
+        <title><?php $this->archiveTitle(array(
+            'category'  =>  _t('分类 %s 下的文章'),
+            'search'    =>  _t('包含关键字 %s 的文章'),
+            'tag'       =>  _t('标签 %s 下的文章'),
+            'author'    =>  _t('%s 发布的文章')
+        ), '', ' - '); ?><?php $this->options->title(); ?></title>
+   <?php } ?>
