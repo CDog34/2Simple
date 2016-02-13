@@ -378,6 +378,8 @@ textarea{
 		padding-bottom: 10px;
 	}
 	nav.nav-fixed{
+		width: 100%;
+		top: 100vh;
 		position: absolute;
 	}
 	nav.nav-fixed{
