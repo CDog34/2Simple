@@ -377,4 +377,10 @@ textarea{
 		border-bottom: 1px dotted azure;
 		padding-bottom: 10px;
 	}
+	nav.nav-fixed{
+		position: absolute;
+	}
+	nav.nav-fixed{
+		background-color:transparent;
+	}
 }
