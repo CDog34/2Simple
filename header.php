@@ -30,6 +30,17 @@
 
     <!-- 通过自有函数输出HTML头部信息 -->
     <?php $this->header(); ?>
+    <?php if (!$this->is('index')){ ?>
+    <style>
+        header{
+            height: 40vh;
+        }
+        nav{
+            top:40vh;
+        }
+
+    </style>
+    <?php } ?>
 
 </head>
 <body>

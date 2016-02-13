@@ -3,18 +3,22 @@ function fly(to){
 		$('body').animate({scrollTop:parseFloat(to)},'700');
 	}
 $(function(){
+
 	var $navBar=$('nav')
 		,navBarFixed=0
 		,$loader=$('.loader')
 		,$pp=$('#pp');
 	$(window).scroll(function(evt){
-		if ($(document).scrollTop()>=$navBar.offset().top && !navBarFixed){
-			$navBar.addClass('nav-fixed');
-			navBarFixed=$navBar.offset().top
-		}else if ($(document).scrollTop()<$('.page-body').offset().top){
-			$navBar.removeClass('nav-fixed');
-			navBarFixed=0;
+		if ($(document).width()>580){
+			if ($(document).scrollTop()>=$navBar.offset().top && !navBarFixed){
+				$navBar.addClass('nav-fixed');
+				navBarFixed=$navBar.offset().top
+			}else if ($(document).scrollTop()<$('.page-body').offset().top){
+				$navBar.removeClass('nav-fixed');
+				navBarFixed=0;
+			}
 		}
+		
 	})
 	$('.fly-to-view').click(function(){
 		fly($('.page-body').offset().top)

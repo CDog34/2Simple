@@ -14,6 +14,7 @@ html,body{
 header{
 	background-size: cover;
 	height: 100vh;
+	position: relative;
 }
 .site-meta{
 	transform:translate(-50%,-50%);
@@ -377,13 +378,5 @@ textarea{
 		width: calc(100% - 50px);
 		border-bottom: 1px dotted azure;
 		padding-bottom: 10px;
-	}
-	nav.nav-fixed{
-		width: 100%;
-		top: 100vh;
-		position: absolute;
-	}
-	nav.nav-fixed{
-		background-color:transparent;
 	}
 }

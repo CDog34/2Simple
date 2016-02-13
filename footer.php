@@ -16,18 +16,12 @@
 </footer><!-- end #footer -->
 
 
-    <script type="text/javascript" src="//upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="//upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.3.min.js"></script>
 
 <script type="text/javascript" src="//filehost.izhai.net/web/jquery.pjax.js"></script>
 <script src="<?php $this->options->themeUrl('hikari.js'); ?>"></script>
 <?php $this->footer(); ?>
-<?php if (!$this->is('index')){ ?>
-<script type="text/javascript">
-$(function(){
-	fly($('.page-body').offset().top);
-});
-</script>
-<?php } ?>
+
 
 <div class="loader">
 	<div class="cssload-thecube">
