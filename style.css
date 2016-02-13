@@ -251,6 +251,7 @@ section.widget{
 }
 .post-content img{
 	max-width: 100%;
+	height: auto;
 }
 .post-content blockquote{
     background-color: rgba(51, 51, 51, 0.06);
