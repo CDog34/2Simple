@@ -4,6 +4,8 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 function themeConfig($form) {
     $headImg = new Typecho_Widget_Helper_Form_Element_Text('headImg', NULL, NULL, _t('首页大图地址'), _t('在这里填入一个图片URL地址, 推荐使用：<a href="https://tat.pics/" target="_blank">TAT 塔塔图床</a>'));
     $form->addInput($headImg);
+    $footerHtml = new Typecho_Widget_Helper_Form_Element_Textarea('footerHtml', NULL, NULL, _t('底部Footer附加内容'), _t('在这里填入Html代码，包括但不限于跟踪代码'));
+    $form->addInput($footerHtml);
 
     $sidebarBlock = new Typecho_Widget_Helper_Form_Element_Checkbox('sidebarBlock',
     array('ShowRecentPosts' => _t('显示最新文章'),

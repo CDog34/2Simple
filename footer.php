@@ -5,10 +5,12 @@
 </div><!-- end #body -->
 
 <footer class="footer" role="contentinfo">
+	    	<?php echo $this->options->footerHtml ? $this->options->footerHtml : "" ?>
     <p class="footer-site">
       &copy; <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.
     </p>
     <p class="footer-theme">
+
       2 Young 2 Simple, Sometimes Naive<br>
       Theme 2Simple By <a href="https://cdog.me" target="_blank">CDog</a>
 

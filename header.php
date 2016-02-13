@@ -52,9 +52,6 @@
     <div class="site-meta" >
         <h1 class="site-title ">
         <a id="logo"  class="header-words" href="<?php $this->options->siteUrl(); ?>">
-            <?php if ($this->options->logoUrl): ?>
-            <img src="<?php $this->options->logoUrl() ?>" alt="<?php $this->options->title() ?>" />
-            <?php endif; ?>
             <?php $this->options->title() ?>
         </a>
         </h1>

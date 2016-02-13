@@ -18,6 +18,9 @@ header{
 }
 .site-meta{
 	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-ms-transform:translate(-50%,-50%);
 	top: 50%;
 	left:50%;
 	text-align: center;
@@ -126,9 +129,15 @@ article.post:before{
 
 .post-title:hover~.post-stage .post-meta{
 	transform:translateX(-100%);
+	-webkit-transform:translateX(-100%);
+	-o-transform:translateX(-100%);
+	-ms-transform:translateX(-100%);
 }
 .post-title:hover~.post-stage .post-summary{
 	transform:translateY(0);
+	-webkit-transform:translateY(0);
+	-o-transform:translateY(0);
+	-ms-transform:translateY(0);
 }
 .post-title{
 	font-size: 2.6em;
@@ -165,8 +174,12 @@ ul.post-meta li i{
     color: #656565;
     position: absolute;
     width: calc(100% - 60px);
+    width: -webkit-calc(100% - 60px);
     top:10%;
     transform: translateY(-150%);
+    -webkit-transform: translateY(-150%);
+    -o-transform: translateY(-150%);
+    -ms-transform: translateY(-150%);
     transition:all 1s .2s;
 }
 .page-body a{
@@ -217,6 +230,7 @@ section.widget{
     display: inline-block;
     margin: 10px 20px;
     width: calc(32% - 40px);
+    width: -webkit-calc(32% - 40px);
     vertical-align: top;
 	text-align: center;
 }
@@ -308,6 +322,7 @@ section.widget{
 	float: left;
 	margin-left: 10px;
 	width: calc(100% - 80px);
+	width: -webkit-calc(100% - 80px);
 
 }
 .comment-list{
@@ -338,6 +353,9 @@ section.widget{
     position: absolute;
     background-color: #9E9898;
     transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
     border-radius: 3px;
     top: 50%;
     right: -10px;
@@ -376,6 +394,7 @@ textarea{
 @media(max-width: 580px){
 	section.widget{
 		width: calc(100% - 50px);
+		width: -webkit-calc(100% - 50px);
 		border-bottom: 1px dotted azure;
 		padding-bottom: 10px;
 	}
