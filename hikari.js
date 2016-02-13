@@ -1,4 +1,7 @@
 //alert('测试中！喵喵哒~')
+function fly(to){
+		$('body').animate({scrollTop:parseFloat(to)},'700');
+	}
 $(function(){
 	var $navBar=$('nav')
 		,navBarFixed=0
@@ -16,9 +19,8 @@ $(function(){
 	$('.fly-to-view').click(function(){
 		fly($('.page-body').offset().top)
 	});
-	function fly(to){
-		$('body').animate({scrollTop:parseFloat(to)},'700');
-	}
+	
+	/*
 	$(document).pjax('a','#pp',{
 		scrollTo:false
 	})
@@ -29,4 +31,5 @@ $(function(){
 		fly($('.page-body').offset().top);
 		$loader.fadeOut();
 	})
+*/
 })

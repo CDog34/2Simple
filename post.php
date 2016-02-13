@@ -1,6 +1,8 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <?php $this->need('header.php'); ?>
 
+
+
 <div class="page-body in-post">
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
     <h1 class="post-title" itemprop="name headline"><?php $this->title() ?></h1>
@@ -24,7 +26,6 @@
 <?php $this->need('comments.php'); ?>
 
 </div>
-
 
 <?php $this->need('sidebar.php'); ?>
 <?php $this->need('footer.php'); ?>

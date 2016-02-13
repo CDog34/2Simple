@@ -282,7 +282,95 @@ section.widget{
 .footer a{
 	color:#3F78C1;
 	text-decoration: none;
+
 }
+
+/*comment*/
+#comments{
+	margin-top: 100px;
+}
+.comment-item{
+	position: relative;
+	margin: 40px 0;
+	padding-bottom: 40px;
+    border-bottom: 1px dashed #C7C7C7;
+}
+.avatar{
+	transition:all .5s;
+	float:left;
+}
+.avatar:hover{
+	border-radius: 40px;
+}
+.comment-right{
+	float: left;
+	margin-left: 10px;
+	width: calc(100% - 80px);
+
+}
+.comment-list{
+	list-style: none;
+}
+.comment-item p{
+	margin: 5px 0px;
+	font-size: 1.2em;
+
+}
+.comment-reply i{
+	color:#989898;
+}
+.comment-date{
+	margin-left: 10px;
+}
+.comment-author,.comment-date{
+	display: inline-block;
+	position: relative;
+}
+.comment-meta, .comment-meta a {
+	color: #989898;
+}
+.comment-author::after{
+    content: "";
+    width: 3px;
+    height: 3px;
+    position: absolute;
+    background-color: #9E9898;
+    transform: translate(-50%,-50%);
+    border-radius: 3px;
+    top: 50%;
+    right: -10px;
+}
+.cmt-item{
+	display: inline-block;
+	width:32%;
+	margin-bottom:10px;
+}
+.cmt-item input{
+	border-left: none;
+	border-top: none;
+	border-right: none;
+	outline: none;
+}
+textarea{
+	border-left: none;
+	border-top: none;
+	border-right: none;
+	outline: none
+
+}
+
+#comment_form button{
+    padding: 15px 10px;
+    background: none;
+    border: 1px solid #CECECE;
+    border-radius: 10px;
+    font-size: 1.5em;
+    margin: 0 auto;
+    display: block;
+}
+
+
+
 @media(max-width: 580px){
 	section.widget{
 		width: calc(100% - 50px);

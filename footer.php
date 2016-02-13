@@ -1,6 +1,6 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 
-<?php if (!$_SERVER['HTTP_X_PJAX']) {
+<?php //if (!$_SERVER['HTTP_X_PJAX']) {
 ?>
 </div><!-- end #body -->
 
@@ -15,12 +15,20 @@
     </p>
 </footer><!-- end #footer -->
 
-<?php $this->footer(); ?>
-<script type="text/javascript" src="//upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.3.min.js"></script>
-<script type="text/javascript" src="//filehost.izhai.net/web/jquery.pjax.js"></script>
-<script src="<?php $this->options->themeUrl('hikari.js'); ?>">
 
+    <script type="text/javascript" src="//upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.3.min.js"></script>
+
+<script type="text/javascript" src="//filehost.izhai.net/web/jquery.pjax.js"></script>
+<script src="<?php $this->options->themeUrl('hikari.js'); ?>"></script>
+<?php $this->footer(); ?>
+<?php if (!$this->is('index')){ ?>
+<script type="text/javascript">
+$(function(){
+	fly($('.page-body').offset().top);
+});
 </script>
+<?php } ?>
+
 <div class="loader">
 	<div class="cssload-thecube">
 		<div class="cssload-cube cssload-c1"></div>
@@ -31,4 +39,4 @@
 </div>
 </body>
 </html>
-<?php } ?>
+<?php //} ?>
