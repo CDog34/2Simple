@@ -1,10 +1,10 @@
 <?php
 /**
- * 一个轻量级Typecho主题
+ * 2 Young 2 Simple Sometimes Naive
  *
  * @package 2Simple
  * @author CDog
- * @version 0.1
+ * @version 1.1
  * @link http://cdog.me
  */
 

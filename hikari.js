@@ -2,7 +2,7 @@
 $(function(){
 	var $navBar=$('nav')
 		,navBarFixed=0
-
+		,$loader=$('.loader')
 		,$pp=$('#pp');
 	$(window).scroll(function(evt){
 		if ($(document).scrollTop()>=$navBar.offset().top && !navBarFixed){
@@ -22,7 +22,11 @@ $(function(){
 	$(document).pjax('a','#pp',{
 		scrollTo:false
 	})
+	$pp.on('pjax:beforeSend',function(){
+		$loader.fadeIn();
+	})
 	$pp.on('pjax:beforeReplace',function(){
 		fly($('.page-body').offset().top);
+		$loader.fadeOut();
 	})
 })

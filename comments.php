@@ -30,7 +30,7 @@ echo $commentClass;
               <cite class="fn"><?php $comments->author(); ?></cite>
           </div>
 
-            <div class="comment-date"><script>document.write(moment('<?php $comments->date('Y-m-d H:i'); ?>').calendar(null,{sameElse:'YYYY年MM月DD日 HH:MM'}));</script></div>
+            <div class="comment-date"><?php $comments->date(); ?></div>
         </div>
         <?php $comments->content(); ?>
         <span class="comment-reply"><?php $comments->reply(); ?></span>

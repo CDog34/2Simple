@@ -27,7 +27,7 @@ a#logo{
 }
 .header-words{
 	text-decoration: none;
-    color: #585858;
+    color: azure;
     font-family: "Microsoft YaHei" ! important;
 }
 .site-description{
@@ -86,6 +86,7 @@ nav.nav-fixed{
 	position: fixed;
 	top: 0;
 	width: 100%;
+	z-index: 10;
 }
 nav.nav-fixed{
 	background: rgba(51, 51, 51, 0.2);
@@ -97,14 +98,30 @@ nav.nav-fixed{
 	max-width: 710px;
 	margin: 0 auto;
 	white-space:normal;
-	overflow: hidden;
+	overflow: visible;
 	padding-top:100px; 
 }
 article.post{
-	margin-bottom: 60px;
+	padding-top: 60px;
 	padding-bottom:60px;
+	padding-left: 20px;
     border-bottom: 1px solid #E4E4E4;
+    border-left: 2px dashed #B1AEAE;
+    position: relative;
 }
+article.post:before{
+	content: "";
+	width: 10px;
+	height: 10px;
+	background-color: #FFF;
+	position: absolute;
+	top: 77px;
+	left: -7.5px;
+	border-radius: 10px;
+	border: 2px solid #333;
+	/* z-index: 10; */
+}
+
 .post-title:hover~.post-stage .post-meta{
 	transform:translateX(-100%);
 }
@@ -163,7 +180,7 @@ ul.post-meta li i{
 ol.page-navigator{
 	list-style: none;
 	width: 80%;
-	margin: 0 auto;
+	margin: 30px auto;
 	padding: 0;
 }
 ol.page-navigator li {
@@ -185,7 +202,7 @@ ol.page-navigator li.next{
 /*bottombar*/
 .bottombar-wrapper{
 	background-color: #333;
-	margin-top: 30px;
+	margin-top: 90px;
 }
 .bottombar{
 	margin-left: auto;

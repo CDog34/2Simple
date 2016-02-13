@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="//cdnjscn.b0.upaiyun.com/libs/normalize/2.1.3/normalize.min.css">
     <link rel="stylesheet" href="//filehost.izhai.net/web/font-awesome/4.5.0/css/font-awesome.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('load.css'); ?>">
 
 
     <!--[if lt IE 9]>
@@ -28,12 +29,8 @@
     <![endif]-->
 
     <!-- 通过自有函数输出HTML头部信息 -->
-    <?php $this->header('keywords=&generator=&template=&pingback=&xmlrpc=&wlw='); ?>
-    <script src="//filehost.izhai.net/web/moment.js/moment.min.js">
+    <?php $this->header(); ?>
 
-    </script>
-    <script type="text/javascript">
-    moment.locale('zh-CN');
     </script>
 </head>
 <body>
@@ -41,7 +38,7 @@
     <div class="browsehappy" role="dialog"><?php _e('当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>'); ?>.</div>
 <![endif]-->
 </div>
-<header id="header" class="clearfix" style="background-image:url(https://tat.pics/v/1455170477299Konachan.com_-_65450_brown_eyes_brown_hair_misaka_mikoto_seifuku_short_hair_to_aru_kagaku_no_railgun_to_aru_majutsu_no_index_vector.jpg)">
+<header id="header" class="clearfix" style="background-image:url(<?php echo $this->options->headImg ? $this->options->headImg : 'https://tat.pics/v/1455170477299Konachan.com_-_65450_brown_eyes_brown_hair_misaka_mikoto_seifuku_short_hair_to_aru_kagaku_no_railgun_to_aru_majutsu_no_index_vector.jpg' ?>)">
     <div class="site-meta" >
         <h1 class="site-title ">
         <a id="logo"  class="header-words" href="<?php $this->options->siteUrl(); ?>">
