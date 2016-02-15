@@ -3,7 +3,7 @@ function fly(to){
 		$('body').animate({scrollTop:parseFloat(to)},'700');
 	}
 $(function(){
-
+/*
 	var $navBar=$('nav')
 		,navBarFixed=0
 		,$loader=$('.loader')
@@ -20,6 +20,7 @@ $(function(){
 		}
 		
 	})
+*/
 	$('.fly-to-view').click(function(){
 		fly($('.page-body').offset().top)
 	});
