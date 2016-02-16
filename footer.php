@@ -7,8 +7,8 @@
 <footer class="footer" role="contentinfo">
 	    	<?php echo $this->options->footerHtml ? $this->options->footerHtml : "" ?>
     <p class="footer-theme">
-    	2Simple By <a href="https://cdog.me" target="_blank">CDog</a>.
-    	Type, then echo
+    	Theme 2Simple By <a href="https://cdog.me" target="_blank">CDog</a>.
+    	Typecho
     </p>
 </footer><!-- end #footer -->
 
