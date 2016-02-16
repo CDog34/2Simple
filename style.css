@@ -305,6 +305,10 @@ section.widget{
 #comments{
 	margin-top: 100px;
 }
+#comments h3{
+	font-size: 1.5em;
+	margin-top: 2em;
+}
 .comment-item{
 	position: relative;
 	margin: 40px 0;
@@ -366,18 +370,34 @@ section.widget{
 	margin-bottom:10px;
 }
 .cmt-item input{
-	border-left: none;
-	border-top: none;
-	border-right: none;
+	border:none;
+	border-bottom: 1px dashed #B1B1B1;
 	outline: none;
+	width: 90%;
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+	padding: 5px;
+
+}
+.cmt-item label{
+	display: block;
+	font-size: 1.3em;
+	text-align: center;
 }
 .cmt-content{
 	text-align: center;
+	position: relative;
 }
 textarea{
-	border-bottom: none;
-	outline: none
-
+	border:1px dashed #B1B1B1;
+	outline: none;
+	padding:10px;
+	width: 80%;
+	display: block;
+	margin: 10px auto;
+	background-color: #F1F1F1;
+	font-size: 1.3em;
 }
 
 #comment_form button{

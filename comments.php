@@ -82,8 +82,7 @@ echo $commentClass;
     		</p>
             <?php endif; ?>
     		<p class="cmt-content">
-                <label for="textarea" class="required"><?php _e('内容'); ?></label>
-                <textarea rows="8" cols="50" name="text" id="textarea" class="textarea" required ><?php $this->remember('text'); ?></textarea>
+                <textarea rows="8" name="text" id="textarea" class="textarea" placeholder="请在这里开始评论"required ><?php $this->remember('text');  ?></textarea>
             </p>
                 <button type="submit" class="submit"><?php _e('提交评论'); ?></button>
     	</form>
