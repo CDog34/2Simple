@@ -422,4 +422,7 @@ textarea{
 	.post-content{
 		font-size: 1em;
 	}
+	ol.comment-list{
+		padding-left: 10px
+	}
 }
