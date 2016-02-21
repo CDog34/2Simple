@@ -24,6 +24,7 @@ $(function(){
 	$('.fly-to-view').click(function(){
 		fly($('.page-body').offset().top)
 	});
+	$('.loader').fadeOut();
 	
 	/*
 	$(document).pjax('a','#pp',{

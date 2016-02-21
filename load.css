@@ -185,5 +185,5 @@
     width: 100vw;
     height: 100vh;
     background-color: rgba(245, 245, 220, 0.52);
-    display: none;
+    display: block;
 }
