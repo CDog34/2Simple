@@ -12,13 +12,13 @@
 
 
     <?php if (!empty($this->options->sidebarBlock) && in_array('ShowCategory', $this->options->sidebarBlock)): ?>
-    <section class="widget divider">
+    <section class="widget divider bottom-tag">
         <h3 class="widget-title"><?php _e('分类'); ?></h3>
         <?php $this->widget('Widget_Metas_Category_List')->listCategories('wrapClass=widget-list fa-ul'); ?>
     </section>
     <?php endif; ?>
 
-     <section class="widget ">
+     <section class="widget bottom-tag">
     <h3 class="widget-title"><?php _e('Links'); ?></h3>
         <?php Links_Plugin::output(); ?>
     </section>
