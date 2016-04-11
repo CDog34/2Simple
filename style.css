@@ -298,10 +298,11 @@ section.widget{
 /*footer*/
 .footer{
 	text-align: center;
-	padding:20px;
-	background-color: #333;
-	color:azure;
-	line-height: 1.4
+    padding: 20px;
+    background-color: #333;
+    color: rgba(240, 255, 255, 0.2);
+    line-height: 1.4;
+    font-size: 12px;
 }
 .footer a{
 	color:#3F78C1;
