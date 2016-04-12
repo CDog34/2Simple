@@ -251,6 +251,11 @@ section.widget{
 	text-decoration: none;
 	color: rgb(232, 222, 202);
 	font-size: .8em;
+	max-width: 140px;
+	white-space: nowrap;
+	overflow: hidden;
+	display: inherit;
+	text-overflow: ellipsis;
 }
 .bottom-tag li{
     display: inline-block;
