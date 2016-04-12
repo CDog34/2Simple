@@ -2,7 +2,7 @@
 html,body{
 	margin: 0;
 	padding: 0;
-    font-family: 'Trebuchet MS', Helvetica, sans-serif "Microsoft YaHei";
+    font-family:'Microsoft YaHei';
     overflow-x:hidden;
 }
 .clearfix {
@@ -254,11 +254,16 @@ section.widget{
 }
 .bottom-tag li{
     display: inline-block;
-    margin: 10px 5px;
+    margin: 10px 2px;
     background-color: rgba(255, 255, 255, 0.26);
     padding: 5px 10px;
-    border-radius: 4px;
+    border-radius: 2px;
+    transition:background-color .2s;
 }
+.bottom-tag li:hover{
+    background-color: #333;
+}
+
 
 .in-post .post-meta li {
 	display: inline-block;
